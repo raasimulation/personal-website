@@ -2,23 +2,53 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rasim Bayramov</title>
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <style>
         * {
             background-color: rgb(0, 0, 0);
-            cursor: grab;
+            cursor: cell;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+
         }
 
         .intro-description {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
+            font-size: 14px;
             color: azure;
             padding: 24px;
             max-width: 420px;
+            min-width: 420px;
         }
 
-        a:link, a:visited {
+        .intro-description:has(.left-body:hover) {
+            background-image: url(img/lbody.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .left-body {
+            position: fixed;
+            pointer-events: auto;
+        }
+
+
+        a:link,
+        a:visited {
             color: azure;
             text-decoration: wavy;
         }
@@ -29,19 +59,91 @@
         }
 
         .update-date {
-            right: 24px;
-            top: 24px;
-            position: absolute;
-
+            z-index: 2;
+            left: 24px;
+            bottom: 24px;
+            position: fixed;
+            margin: 0;
             color: azure;
-            font-style: italic;
+            font-size: 12px;
+        }
+
+        .content {
+            font-size: 14px;
+            color: azure;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+        }
+
+        .p-top {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 8px;
+
+        }
+
+        .p-details {
+            text-align: right;
+            width: 100%;
+            line-height: 24px;
+        }
+
+        .p-year {
+            color: azure;
+            margin-left: 12px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-left: 8px;
+            padding-right: 8px;
+            border: 1px solid azure;
+            border-radius: 16px;
+        }
+
+        .p-title {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .p-text {
+            color: rgba(185, 185, 185, 0.849);
+            width: 100%;
+            display: inline-block;
+        }
+
+        .p-image {
+            border-radius: 12px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+            height: 600px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        .p-image img {
+            border-radius: 12px;
+            flex: 0 0 auto;
+            height: 100%;
+            z-index: 0;
         }
     </style>
 </head>
 
 <body>
     <div class="intro-description">
-        Rasim Bayramov <br><br><a href="mailto:rasimbayramovj@gmail.com">Email)</a> &nbsp;
+        <span class="left-body">Rasim Bayramov</span><br><br>
+        <a href="mailto:rasimbayramovj@gmail.com">Email)</a> &nbsp;
         <a href="https://www.instagram.com/rasimsimsim/">Instagram))</a> &nbsp;
         <a href="https://read.cv/rasim">Resume)))</a>
         <br><br>
@@ -50,11 +152,46 @@
         experiences, technology and memory. The manifestation of these ideas find themselves in websites, installations,
         print, videos, performances and sculptures. <br><br>From Baku to Istanbul to (currently) Richmond.
         <br><br><br>
-        Still building this site :-) Work will appear soon 
+        Still building this site :-) <br>Work is slowly appearing
+    </div>
+    <div class="content">
+        <div class="project">
+            <div class="p-top">
+                <div class="p-title"><a href="https://youtube.com">2024 VCUArts MFA Thesis Exhibition Identity
+                        &#8594;</a></div>
+                <div class="p-details">Identity, Print, Website<span class="p-year">2024</span></div>
+            </div>
+            <div class="p-text">
+                The project is about this this and this. It delves into this this and this. Made with this this and this
+            </div>
+
+            <div class="p-image">
+                <img src="vinyl-mfa.jpg">
+                <img src="poster-1.jpg">
+                <video autoplay loop src="web-mfa.mov">
+
+            </div>
+        </div>
+        <div class="project">
+            <div class="p-top">
+                <div class="p-title">This fucking cat yo</div>
+                <div class="p-details">Identity, Print, Website<span class="p-year">2024</span></div>
+            </div>
+            <div class="p-text">
+                The project is about this this and this. It delves into this this and this. Made with this this and this
+            </div>
+            <div class="p-image">
+                <img src="cat.jpg">
+                <img src="cat.jpg">
+
+            </div>
+        </div>
     </div>
     <div class="update-date">
-        ....Updated on 21 February 2024
+        Last updated on 21 February 2024
     </div>
+    <script>
+    </script>
 </body>
 
 </html>
