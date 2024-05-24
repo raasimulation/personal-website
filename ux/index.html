@@ -4,176 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rasim Bayramov</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-        * {
-            cursor: auto;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            font-family: "Inter", sans-serif;
-        }
-
-        .header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-left: 16px;
-            margin-right: 16px;
-        }
-
-        .left {
-            font-size: 16px;
-            line-height: 24px;
-            list-style-type: none;
-            display: inline-flex;
-            flex-direction: row;
-            gap: 10px;
-            width: 20%;
-            padding: 8px 16px;
-            align-items: center;
-            flex-shrink: 0;
-        }
-
-        .right {
-            color: #a3a3a3;
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            height: 36px;
-            font-size: 16px;
-            padding: 8px 16px;
-            align-items: center;
-            flex-shrink: 0;
-        }
-
-        li {
-            color: #a3a3a3;
-            padding: 8px 12px 8px 12px;
-            border-radius: 8px;
-            list-style: none;
-        }
-
-        li:hover {
-            background-color: #eeeeee;
-            box-shadow: 1px;
-            color: #333;
-            border: 1px solid #e4e4e4;
-            cursor: pointer;
-        }
-
-        li.selected {
-            color: #333;
-        }
-
-        #connect {
-            font-family: "Roboto Mono", monospace;
-            font-style: 700;
-            padding: 8px 12px;
-            color: azure;
-            display: flex;
-            align-items: flex-start;
-            line-height: auto;
-            background-color: #333;
-            text-align: center;
-            --border-bottom-width: 1px;
-            --border-color: rgb(56, 56, 56);
-            --border-left-width: 1px;
-            --border-right-width: 1px;
-            --border-style: solid;
-            --border-top-width: 1px;
-            border-radius: 8px;
-            background-color: rgb(0, 0, 0);
-            box-shadow: rgba(255, 255, 255, 0.35) 0px -3px 1px 0px inset, rgba(0, 0, 0, 0.042) 0px 0.24145px 0.24145px 0px, rgba(0, 0, 0, 0.35) 0px 2px 2px 0px;
-        }
-
-        #connect:hover {
-            border: solid 1.5px rgb(182, 182, 182);
-            box-shadow: none;
-        }
-
-        .link {
-            color: #a3a3a3;
-            background-color: none;
-        }
-
-        .link:hover {
-            color: #333;
-            text-decoration: wavy;
-            cursor: alias;
-            background-color: none;
-        }
-
-        #footer {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: first baseline;
-            height: 100px;
-            background-color: #fafafa;
-            padding: 24px 36px;
-            border-top: 2px solid #f3f3f3
-        }
-
-        #footer-l {
-            display: inline-flex;
-            flex-direction: row;
-            gap: 12px;
-            align-items: center;
-            font-size: 14px;
-            color: #a3a3a3;
-        }
-
-        #footer-r {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: end;
-            gap: 12px;
-            font-size: 14px;
-            color: #a3a3a3;
-        }
-
-        #update {
-            padding: 4px 12px;
-            border: solid 1px #333;
-            border-radius: 24px;
-            color: #333;
-        }
-
-        .content {
-            display: grid;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
 
 <body>
-    <div class="container">
+    <div class="inside">
         <div class="header">
             <ul class="left">
-                <li>Rasim</li>
-                <li>Projects</li>
-                <li>About</li>
+                <a href="./index.html"><li class="active-tab">Rasim</li></a>
+                <a href=",/projects.html"><li>Projects</li></a>
+                <a href=",/about.html"><li>About</li></a>
             </ul>
             <ul class="right">
                 <li class="link" target="_blank" href="https://github.com/raasimulation">Github</li>
                 <li class="link" target="_blank" href="https://read.cv/rasim">CV</li>
-                <li id="connect">Connect</li>
+                <li id="connect">Connect<span class="tooltip">Let's talk!</span></li>
             </ul>
         </div>
-        <div class="content"></div>
-        <div class="about">
-
-        </div>
+        <main>
+            <div class="directory">
+                <div class="dir-item">Doktar Product-Brand Guidelines<span>2024</span></div>
+                <div class="dir-item">IoTrack App<span>2023</span></div>
+                <div class="dir-item">Doktar Website<span>2022-2023</span></div>
+                <div class="dir-item">Doktar Multi-Service App<span>2024</span></div>
+                <div class="dir-item">Refresh<span>2024</span></div>
+                <div class="dir-item">Farmville<span>2023</span></div>
+                <div class="dir-item">Arpa Design System<span>2023</span></div>
+                <div class="dir-item">Pawia<span>2022</span></div>
+                <div class="dir-item">Tuoli<span>2023</span></div>
+            </div>
+            <div class="projects">
+                <div class="p-item">
+                    <div class="p-img" style="background-image:url('/ux/img/p1.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Doktar Product-Brand Guidelines <span>2024</span></div>
+                </div>
+                <div class="p-item">
+                    <div class="p-img" style="background-image:url('/ux/img/p2.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">IoTrack App <span>2024</span></div>
+                </div>
+                <div class="p-item">
+                    <div class="p-img" style="background-image:url('/ux/img/p3.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Doktar Website <span>2022-2023</span></div>
+                </div>
+                <div class="p-item">
+                    <div class="p-img" style="background-image:url('/ux/img/p4.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Doktar Multi-Service App <span>2024</span></div>
+                </div>
+                <div class="p-item">
+                    <div class="p-img" style="background-image:url('/ux/img/p5.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Refresh <span>2024</span></div>
+                </div>
+                <div class="p-item">
+                    <div class="p-img" style="background-image:url('/ux/img/p6.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Farmville <span>2024</span></div>
+                </div>
+                <div class="p-item">
+                    <div class="p-img" style="background-image:url('/ux/img/p7.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Arpa Design System <span>2024</span></div>
+                </div>
+                <div class="p-item">
+                    <div class="p-img" style="background-image:url('/ux/img/p8.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Pawia <span>2022</span></div>
+                </div>
+                <div class="p-item">
+                    <div class="p-img" style="background-image:url('/ux/img/p9.jpg'); background-size: cover;">
+                    </div>
+                    <div class="details">Tuoli <span>2022</span></div>
+                </div>
+            </div>
+            <div class="p-anim"></div>
+        </main>
         <div id="footer">
             <div id="footer-l">
                 <div id="update">v1.0.0</div>
@@ -181,12 +90,14 @@
             </div>
             <div id="footer-r">
                 Say hi!<br><br>
-                <a style="text-decoration: none; cursor: pointer; color: #333;"
-                    href="mailto:rasimbayramovj@gmail.com">rasimbayramovj@gmail.com</a>
+                <a class="link" style="color: #333;" href="mailto:rasimbayramovj@gmail.com">rasimbayramovj@gmail.com</a>
             </div>
         </div>
     </div>
-    </div>
+    <script>
+    </script>
+
+
 </body>
 
 </html>
