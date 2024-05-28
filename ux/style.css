@@ -336,7 +336,7 @@ a,
     border-top:3px solid #f0f0f0 ;
 }
 
-@media (max-width: 51em) {
+@media screen and (max-width: 51em) {
 
     .header {
         z-index: 3;
