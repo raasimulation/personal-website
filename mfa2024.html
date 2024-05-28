@@ -2,8 +2,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rasim Bayramov</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 VCUArts MFA Thesis Exhibition Identity</title>
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -17,38 +17,36 @@
             background-color: rgb(0, 0, 0);
             cursor: cell;
             font-family: Arial, Helvetica, sans-serif;
-            box-sizing: border-box;
-
         }
 
         body {
             margin: 0;
             display: flex;
-            flex-direction: row;
-            min-height: 100vh;
-            width: fit-content;
+            flex-direction: column;
+            gap: 40px;
+            font-size: 16px;
         }
 
         .intro-description {
+            display: flex;
+            flex-direction: row;
             font-size: 14px;
+            justify-content: space-between;
             color: azure;
             padding: 24px;
-            max-width: 420px;
-            min-width: 420px;
-            height: 100%;
-            border-right: 1px #222222 solid;
-            text-decoration: wavy;
+            max-width: 100%;
         }
 
         .intro-description:has(.left-body:hover) {
             background-image: url(img/lbody.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .left-body {
-            position: fixed;
+            color: #a3a3a3;
             pointer-events: auto;
         }
-
 
         a:link,
         a:visited {
@@ -72,39 +70,39 @@
         }
 
         .content {
-            column-count: 3;
-            /* Adjust the number of columns as needed */
-            column-gap: 1em;
-            /* Adjust the gap between columns as needed */
-            width: 90%;
-            display: grid;
-            padding: 24px;
-            margin: 8px auto;
-        }
-
-        .item {
-            break-inside: avoid;
-        }
-
-        .p1 {
             display: flex;
             flex-direction: column;
-            overflow: auto;
-            gap: 16px;
         }
 
+        .info-banner {
+            color: azure;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px;
+            overflow-x: hidden;
+            border-bottom: 1px #222222 solid
+        }
+
+        .images {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 24px;
+        }
         .p-top {
             display: flex;
             flex-direction: column;
             margin-bottom: 8px;
-            gap: 8px;
+            gap: 24px;
         }
 
         .p-details {
             text-align: left;
             width: 100%;
             line-height: 24px;
-            color: #9c9c9c;
+            font-size: 16px;
         }
 
         .p-year {
@@ -114,75 +112,55 @@
             padding-bottom: 2px;
             padding-left: 8px;
             padding-right: 8px;
-            border: 1px solid #9c9c9c;
+            border: 1px solid azure;
             border-radius: 16px;
         }
 
         .p-title {
             width: 100%;
             display: inline-block;
+            font-size: 24px;
         }
 
         .p-text {
             color: rgba(185, 185, 185, 0.849);
-            width: 100%;
+            width: 30%;
             display: inline-block;
-        }
-
-        .p-image {
-            border-radius: 12px;
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            width: 100%;
-            height: 600px;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-        }
-
-        .p-image img {
-            width: auto;
-            border-radius: 12px;
-            flex: 0 0 auto;
-            height: 100%;
-            z-index: 0;
-            background-size: cover;
         }
     </style>
 </head>
 
 <body>
     <div class="intro-description">
-        <span class="left-body">Rasim Bayramov</span><br><br>
-        <a href="mailto:rasimbayramovj@gmail.com">Email)</a> &nbsp;
-        <a href="https://www.instagram.com/rasimsimsim/">Instagram))</a> &nbsp;
-        <a href="https://read.cv/rasim">Resume)))</a>
-        <br><br>
-        They find comfort in the discovery of the unknown. Inviting others to connect with it, their work uses the human
-        body as an interface for a link. A link that goes through bodies of nature, objects of use, everyday
-        experiences, technology and memory. The manifestation of these ideas find themselves in websites, installations,
-        print, videos, performances and sculptures. <br><br>From Baku to Istanbul to (currently) Richmond.
-        <br><br><br>
-        Still building this site :-) <br>Work is slowly appearing
+        <span class="left-body">Rasim Bayramov</span>
+        <span><a href="mailto:rasimbayramovj@gmail.com">Email)</a>
+            <a href="https://www.instagram.com/rasimsimsim/">Instagram))</a>
+            <a href="https://read.cv/rasim">Resume)))</a></span>
     </div>
     <div class="content">
-        <div class="item">
-            <div class="p-image">
-                <video autoplay loop src="web-mfa.mov">
-            </div>
+        <div class="info-banner">
             <div class="p-top">
-                <div class="p-title"><a href="mfa2024.html">2024 VCUArts MFA Thesis Exhibition Identity
-                        &#8594;</a></div>
+                <div class="p-title"><a href="index.html">&larr;<br></a>2024 VCUArts MFA Thesis Exhibition Identity</div>
                 <div class="p-details">Identity, Print, Website<span class="p-year">2024</span></div>
+                <a href="http://arts.vcu.edu/mfa2024" style="text-decoration: underline;" target="_blank">Visit the
+                    website</a>
+            </div>
+            <div class="p-text">The 2024 MFA Thesis Exhibition features 33 outstanding emerging artists and designers.
+                Representing eight departments, these students’ ambitious and challenging research pushes beyond
+                traditional
+                disciplines to shape what is new and next in visual and material culture.
+            </div>
+            <div class="update-date">
+                Last updated on 21 February 2024
             </div>
         </div>
-
+        <div class="images">
+            <img src="/poster-1.jpg" width="800px">
+            <img src="/vinyl-mfa.jpg" height="800px">
+            <img>
+            <img>
+        </div>
     </div>
-    <div class="update-date">
-        Last updated on 21 February 2024
-    </div>
-    <script>
-    </script>
 </body>
 
 </html>

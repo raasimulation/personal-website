@@ -6,6 +6,17 @@
     src: url(./img/sohne.otf);
 }
 
+@font-face {
+    font-family: Geist;
+    src: url(./img/geist.ttf);
+
+}
+@font-face {
+    font-family: Geist Mono;
+    src: url(./img/geist.ttf);
+}
+
+
 * {
     cursor: auto;
 }
@@ -18,7 +29,7 @@ body {
 .inside {
     display: flex;
     flex-direction: column;
-    font-family: Sohne;
+    font-family: Geist;
 }
 
 .header {
@@ -37,7 +48,7 @@ body {
 
 .left {
     font-size: 16px;
-    line-height: 24px;
+    height: 36px;
     list-style-type: none;
     display: inline-flex;
     flex-direction: row;
@@ -94,7 +105,7 @@ li:hover {
 
 
 #connect {
-    font-family: "Roboto Mono";
+    font-family: Geist Mono;
     font-style: 700;
     padding: 8px 12px;
     color: #5c5d64;
@@ -164,7 +175,7 @@ li:hover {
     flex-direction: row;
     gap: 12px;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
     color: #a3a3a3;
 }
 
@@ -173,7 +184,7 @@ li:hover {
     flex-direction: column;
     align-items: end;
     gap: 12px;
-    font-size: 14px;
+    font-size: 16px;
     color: #a3a3a3;
 }
 
@@ -308,7 +319,7 @@ a,
     background-color: #f3f3f3;
     height: 240px;
     border-radius: 8px;
-    margin: 72px 72px 36px 72px;
+    margin: 72px 72px 16px 72px;
 }
 
 #about {
@@ -321,26 +332,29 @@ a,
 .about-item {
     font-size: 20px;
     width: 33%;
+    padding: 12px 0 0 0;
+    border-top:3px solid #f0f0f0 ;
 }
 
 @media only screen and (max-width: 768px) {
 
     .header {
-        margin-left: 8px;
         z-index: 3;
-        margin-right: 8px;
         background-color: #fff;
         position: sticky;
         top: 0;
-        width: 100%;
+        width: auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
-        border-bottom: 1px solid #f5f5f5;
+        margin: 0;
+        padding: 0 16px;
+        align-items:center;
+        border-bottom: 1px solid #eee;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
     }
 
-    .right:last-child {
+    #glink, #cvlink {
         display: none;
     }
 
@@ -422,9 +436,12 @@ a,
 
     #footer-l {
         flex-direction: row-reverse;
+        font-size: 14px;
     }
 
     #footer-r {
         flex-direction: row;
+        font-size: 14px;
+
     }
 }
