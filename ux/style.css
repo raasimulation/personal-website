@@ -11,6 +11,7 @@
     src: url(./img/geist.ttf);
 
 }
+
 @font-face {
     font-family: Geist Mono;
     src: url(./img/geist.ttf);
@@ -333,10 +334,10 @@ a,
     font-size: 20px;
     width: 33%;
     padding: 12px 0 0 0;
-    border-top:3px solid #f0f0f0 ;
+    border-top: 3px solid #f0f0f0;
 }
 
-@media screen and (max-width: 51em) {
+@media (max-width: 51em) {
 
     .header {
         z-index: 3;
@@ -349,12 +350,13 @@ a,
         justify-content: space-between;
         margin: 0;
         padding: 0 16px;
-        align-items:center;
+        align-items: center;
         border-bottom: 1px solid #eee;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
     }
 
-    #glink, #cvlink {
+    #glink,
+    #cvlink {
         display: none;
     }
 
@@ -403,9 +405,9 @@ a,
         width: 100%;
         height: 240px;
         border-radius: 8px;
-        background-position:right;
+        background-position: right;
     }
-    
+
     #banner {
         background-color: #f3f3f3;
         height: 160px;
