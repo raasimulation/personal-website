@@ -337,7 +337,7 @@ a,
     border-top: 3px solid #f0f0f0;
 }
 
-@media (min-width: 15em) and (max-width: 50em) and (orientation: portrait) {
+@media only screen and (min-width: 15em) and (max-width: 50em) and (orientation: portrait) {
 
     .header {
         z-index: 3;
