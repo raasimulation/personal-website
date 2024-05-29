@@ -13,12 +13,22 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <style>
+        @font-face {
+            font-family: Geist;
+            src: url(/ux/img/geist.ttf);
+        }
+
+        /* General Styles */
         * {
             background-color: rgb(0, 0, 0);
             cursor: cell;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Geist;
             box-sizing: border-box;
-
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            scrollbar-width: thin;
+            scrollbar-color: rgb(179, 97, 157) transparent;;
         }
 
         body {
@@ -29,13 +39,15 @@
             width: fit-content;
         }
 
+
+        /* Intro Section */
         .intro-description {
             font-size: 14px;
             color: azure;
             padding: 24px;
             max-width: 420px;
             min-width: 420px;
-            height: 100%;
+            height: auto;
             border-right: 1px #222222 solid;
             text-decoration: wavy;
         }
@@ -49,7 +61,7 @@
             pointer-events: auto;
         }
 
-
+        /* Links */
         a:link,
         a:visited {
             color: azure;
@@ -61,6 +73,7 @@
             text-decoration: wavy;
         }
 
+        /* Update Date */
         .update-date {
             z-index: 2;
             left: 24px;
@@ -73,17 +86,43 @@
 
         .content {
             column-count: 3;
-            /* Adjust the number of columns as needed */
-            column-gap: 1em;
-            /* Adjust the gap between columns as needed */
-            width: 90%;
-            display: grid;
+            -moz-column-count: 3;
+            -webkit-column-count: 3;
+            -moz-column-gap: 24px;
+            -webkit-column-gap: 24px;
+            column-gap: 24px;
+            height: auto;
+            width: 100%;
             padding: 24px;
-            margin: 8px auto;
         }
 
-        .item {
+        .media-item {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
             break-inside: avoid;
+        }
+
+        /* Image Styles */
+        .p-image {
+            border-radius: 12px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
+        .p-image img,
+        .p-image video {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            height: auto;
+            z-index: 0;
+            background-size: cover;
         }
 
         .p1 {
@@ -97,11 +136,15 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 8px;
-            gap: 8px;
+            gap: 4px;
         }
 
         .p-details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
             text-align: left;
+            align-items: center;
             width: 100%;
             line-height: 24px;
             color: #9c9c9c;
@@ -128,26 +171,6 @@
             width: 100%;
             display: inline-block;
         }
-
-        .p-image {
-            border-radius: 12px;
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            width: 100%;
-            height: 600px;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-        }
-
-        .p-image img {
-            width: auto;
-            border-radius: 12px;
-            flex: 0 0 auto;
-            height: 100%;
-            z-index: 0;
-            background-size: cover;
-        }
     </style>
 </head>
 
@@ -166,9 +189,9 @@
         Still building this site :-) <br>Work is slowly appearing
     </div>
     <div class="content">
-        <div class="item">
+        <div class="media-item" slot="column-0-slot-0">
             <div class="p-image">
-                <video autoplay loop src="web-mfa.mov">
+                <video autoplay loop muted src="web-mfa.mov">
             </div>
             <div class="p-top">
                 <div class="p-title"><a href="mfa2024.html">2024 VCUArts MFA Thesis Exhibition Identity
@@ -176,7 +199,60 @@
                 <div class="p-details">Identity, Print, Website<span class="p-year">2024</span></div>
             </div>
         </div>
-
+        <div class="media-item" slot="column-1-slot-1">
+            <div class="p-image">
+                <video autoplay loop muted src="tree.mp4">
+            </div>
+            <div class="p-top">
+                <div class="p-title"><a href="tree.html">what i found under the tree &#8594;</a></div>
+                <div class="p-details">Sculpture, Installation, Website<span class="p-year">2023</span></div>
+            </div>
+        </div>
+        <div class="media-item" slot="column-2-slot-2">
+            <div class="p-image">
+                <img src="/window.JPG">
+            </div>
+            <div class="p-top">
+                <div class="p-title"><a href="window.html">three windows: say hi. &#8594;</a></div>
+                <div class="p-details">Sculpture, Installation, Website<span class="p-year">2024</span></div>
+            </div>
+        </div>
+        <div class="media-item" slot="column-2-slot-3">
+            <div class="p-image">
+                <img src="/sister.jpg">
+            </div>
+            <div class="p-top">
+                <div class="p-title"><a href="sister.html">sister swings &#8594;</a></div>
+                <div class="p-details">Site Intervention, Installation, Website<span class="p-year">2023</span></div>
+            </div>
+        </div>
+        <div class="media-item" slot="column-2-slot-3">
+            <div class="p-image">
+                <img src="/phone.jpg">
+            </div>
+            <div class="p-top">
+                <div class="p-title"><a href="phone.html">phoneSketches &#8594;</a></div>
+                <div class="p-details">Website, Mobile, Interactive<span class="p-year">2023-2024</span></div>
+            </div>
+        </div>
+        <div class="media-item" slot="column-2-slot-3">
+            <div class="p-image">
+                <img src="/swan.jpg">
+            </div>
+            <div class="p-top">
+                <div class="p-title"><a href="swan.html">a song i sang to the lake&#8594;</a></div>
+                <div class="p-details">Performance, Print<span class="p-year">2024</span></div>
+            </div>
+        </div>
+        <div class="media-item" slot="column-2-slot-3">
+            <div class="p-image">
+                <video autoplay loop muted src="cup.mp4">
+            </div>
+            <div class="p-top">
+                <div class="p-title"><a href="cup.html">two cups and a secret&#8594;</a></div>
+                <div class="p-details">Performance, Cups, Participatory<span class="p-year">2024</span></div>
+            </div>
+        </div>
     </div>
     <div class="update-date">
         Last updated on 21 February 2024

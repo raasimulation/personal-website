@@ -13,10 +13,19 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <style>
+        @font-face {
+            font-family: Geist;
+            src: url(/ux/img/geist.ttf);
+        }
+
         * {
             background-color: rgb(0, 0, 0);
             cursor: cell;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Geist;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
         }
 
         body {
@@ -91,6 +100,7 @@
             gap: 16px;
             margin: 24px;
         }
+
         .p-top {
             display: flex;
             flex-direction: column;
@@ -140,7 +150,8 @@
     <div class="content">
         <div class="info-banner">
             <div class="p-top">
-                <div class="p-title"><a href="index.html">&larr;<br></a>2024 VCUArts MFA Thesis Exhibition Identity</div>
+                <div class="p-title"><a href="index.html">&larr;<br></a>2024 VCUArts MFA Thesis Exhibition Identity
+                </div>
                 <div class="p-details">Identity, Print, Website<span class="p-year">2024</span></div>
                 <a href="http://arts.vcu.edu/mfa2024" style="text-decoration: underline;" target="_blank">Visit the
                     website</a>
