@@ -160,6 +160,7 @@
             const changeVideo = (videoSrc) => {
                 if (videoSrc) {
                     videoElement.src = videoSrc;
+                    videoElement.load();
                     videoElement.classList.add('fade-in');
                     videoElement.play();
                 }
@@ -174,7 +175,7 @@
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 1
+                threshold: 0.5 // Adjust threshold to ensure video changes when element is half-visible
             };
 
             const observerCallback = (entries) => {
@@ -208,8 +209,7 @@
                     const targetItem = document.querySelector(`.p-item[data-video="${videoSrc}"]`);
                     if (targetItem) {
                         targetItem.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
-                        // Ensure video changes after scrolling
-                        setTimeout(() => changeVideo(videoSrc), 500); // Adjust timeout as needed
+                        setTimeout(() => changeVideo(videoSrc), 500); // Ensure video changes after scrolling
                     }
                 });
             });
@@ -219,7 +219,6 @@
 
             const rasimLink = document.getElementById('index');
 
-            // Function to handle the active-tab switching
             const setActiveTab = (element) => {
                 document.querySelectorAll('.left li').forEach(li => {
                     li.classList.remove('active-tab');
@@ -259,6 +258,7 @@
                 }
             });
         });
+
     </script>
 </body>
 

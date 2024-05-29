@@ -280,7 +280,6 @@ li:hover {
     width: auto;
     height: auto;
     z-index: -100;
-    opacity: 0;
     transition: opacity 0.5s cubic-bezier(.24, -0.01, 0, 1);
 }
 
