@@ -11,6 +11,9 @@
 
 * {
     cursor: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 body {
@@ -211,7 +214,7 @@ li:hover {
 }
 
 .dir-item {
-    color: #cecece;
+    color: #a3a3a3;
     min-width: 100%;
     font-weight: 300;
     white-space: nowrap;
@@ -246,14 +249,19 @@ li:hover {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    transition: all .2s cubic-bezier(.23, 1, .32, 1);
 }
-
+.p-item:hover {
+    transform: translateX(16px);
+}
 .p-img {
     background-color: #ffffff;
     width: 600px;
     height: 400px;
     border-radius: 8px;
 }
+
+
 
 .p-anim {
     position: sticky;
