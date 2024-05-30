@@ -26,6 +26,9 @@ body {
 
 /* Intro Section */
 .intro-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     font-size: 14px;
     color: azure;
     padding: 24px;
@@ -39,9 +42,20 @@ body {
     background-image: url(img/lbody.jpg);
 }
 
-.left-body {
+#left-body {
     position: fixed;
     pointer-events: auto;
+}
+
+#links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 4px;
+}
+
+#mobile-text {
+    display: none;
 }
 
 /* Links */
