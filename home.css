@@ -194,7 +194,7 @@ a:hover {
         color: rgb(255, 188, 238);
     }
 
-    .left-body {
+    #left-body {
         display: none;
     }
 
