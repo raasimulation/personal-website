@@ -4,8 +4,13 @@
 }
 
 /* General Styles */
-* {
 
+::selection {
+    color: rgb(255, 130, 224);
+    background: none;
+}
+
+* {
     cursor: cell;
     font-family: Geist;
     box-sizing: border-box;
@@ -62,7 +67,7 @@ body {
 a:link,
 a:visited {
     color: azure;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 a:hover {
@@ -191,13 +196,13 @@ a:hover {
 }
 
 .filter-buttons .filter-button:hover {
-    transform:translateY(-2px);
-    background-color:  rgb(255, 130, 224);
+    transform: translateY(-2px);
+    background-color: rgb(255, 130, 224);
     color: azure;
 }
 
 .filter-buttons .selected {
-    background-color:  rgb(255, 130, 224);
+    background-color: rgb(255, 130, 224);
     color: #000;
 }
 
@@ -303,11 +308,11 @@ a:hover {
     }
 
     .filter-buttons .filter-button:active {
-        transform:translateX(-8px);
-        background-color:  rgb(255, 130, 224);
+        transform: translateX(-8px);
+        background-color: rgb(255, 130, 224);
         color: azure;
     }
-    
+
     .filter-buttons .clear-filter-button:active {
         color: #e74c3c;
         background-color: none;
