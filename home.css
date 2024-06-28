@@ -1,6 +1,6 @@
 @font-face {
     font-family: Geist;
-    src: url(./img/geist.ttf);
+    src: url(assets/geist.ttf);
 }
 
 /* General Styles */
@@ -44,7 +44,7 @@ body {
 }
 
 .intro-description:has(#left-body:hover) {
-    background-image: url(./img/lbody.jpg);
+    background-image: url(assets/lbody.webp);
 }
 
 #left-body {
@@ -99,6 +99,20 @@ a:hover {
     gap: 16px;
     margin-bottom: 24px;
     break-inside: avoid;
+    transition: opacity 0.2s cubic-bezier(.34,.36,0,.98), transform 0.2s cubic-bezier(.34,.36,0,.98);
+    opacity: 1;
+    transform: none;
+}
+
+.media-item.hiding {
+    opacity: 0.2;
+    transform: translateY(-10px);
+}
+
+.media-item.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .p-image {

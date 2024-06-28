@@ -1,6 +1,6 @@
 @font-face {
     font-family: Geist;
-    src: url(./img/geist.ttf);
+    src: url(assets/geist.ttf);
 }
 
 * {
@@ -33,13 +33,13 @@ body {
 
 .intro-description:has(#left-body:hover) {
     color: rgb(255, 130, 224);
-    background-image: url(img/lbody.jpg);
+    background-image: url(assets/lbody.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #left-body {
-    font-size: 24px;
+    font-size: 14px;
     pointer-events: auto;
     width: 100%;
 }
@@ -65,7 +65,7 @@ a:hover {
     flex-direction: row;
     width: auto;
     gap: 4px;
-    font-size: 24px;
+    font-size: 14px;
 }
 
 .info-banner {
@@ -122,7 +122,7 @@ a:hover {
     padding: 24px;
 }
 
-.images img {
+.images img, video {
     width: 100%;
     object-fit: cover;
     height: auto;

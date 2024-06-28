@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Rasim Bayramov</title>
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="stylesheet" href="home.css">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="/home.css">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.39/Tone.js"></script>
@@ -26,9 +26,7 @@
             <a href="https://read.cv/rasim" onmouseover="playJingle()">Resume</a>
         </span>
 
-        <span id="web-text">They find comfort in the discovery of the unknown. Inviting others to connect with it, their
-            work uses the human body as an interface for a link. A link that goes through bodies of nature, objects of
-            use, everyday experiences, technology and memory. The manifestation of these ideas find themselves in
+        <span id="web-text">They find comfort in the discovery of the unknown. Inviting others to connect with it through rituals, their work uses the human body as an interface for a link. A link that goes through bodies of nature, objects of use, everyday experiences, technology and memory. An ever changing scale that carries weights of culture, social structures, gender and post-colonial reality, balanced at times with collectivity and participation. The manifestation of these ideas find themselves in
             websites, installations, print, videos, performances and sculptures.</span>
         <span id="mobile-text">Rasim Bayramov is a designer and artist interested in unfolding of objects, humans,
             technologies and their invisible links through websites, sculptures, print and more</span><br><br>
@@ -37,209 +35,184 @@
             <button id="clear-filter" class="clear-filter-button" onclick="clearFilter()">Clear Filter</button>
             <button id="Identity-filter" class="filter-button" onclick="filterSelection('Identity')">Identity</button>
             <button id="Print-filter" class="filter-button" onclick="filterSelection('Print')">Print</button>
+            <button id="Sound-filter" class="filter-button" onclick="filterSelection('Sound')">Sound</button>
+            <button id="Video-filter" class="filter-button" onclick="filterSelection('Video')">Video</button>
+            <button id="Poster-filter" class="filter-button" onclick="filterSelection('Poster')">Poster</button>
+            <button id="Digital-filter" class="filter-button" onclick="filterSelection('Digital')">Digital</button>
             <button id="Website-filter" class="filter-button" onclick="filterSelection('Website')">Website</button>
-            <button id="Sculpture-filter" class="filter-button"
-                onclick="filterSelection('Sculpture')">Sculpture</button>
             <button id="Installation-filter" class="filter-button"
                 onclick="filterSelection('Installation')">Installation</button>
             <button id="Performance-filter" class="filter-button"
                 onclick="filterSelection('Performance')">Performance</button>
+            <button id="Workshop-filter" class="filter-button" onclick="filterSelection('Workshop')">Workshop</button>
         </div>
 
     </div>
 
     <div class="content">
-        <div class="media-item Identity Print Website">
+        <div class="media-item Identity Print Poster Website">
             <div class="p-image">
-                <video autoplay loop playsinline muted src="web-mfa.mp4"></video>
+                <video autoplay loop playsinline muted src="/assets/social.mp4"></video>
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="mfa2024.html">2024 VCUArts MFA Thesis Exhibition Identity</a></div>
+                <div class="p-title"><a href="pages/mfa2024.html">2024 VCUArts MFA Thesis Exhibition Identity</a></div>
                 <div class="p-details">Identity, Print, Website<span class="p-year">2024</span></div>
             </div>
         </div>
-        <div class="media-item Sculpture Installation">
+        <div class="media-item Website Installation">
             <div class="p-image">
-                <video autoplay loop playsinline muted src="tree.mp4"></video>
+                <video autoplay loop playsinline muted src="assets/tree.mp4"></video>
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="tree.html">what i found under the tree</a></div>
-                <div class="p-details">Sculpture, Installation, Website<span class="p-year">2023</span></div>
+                <div class="p-title"><a href="pages/tree.html">what i found under the tree</a></div>
+                <div class="p-details">Installation, Website<span class="p-year">2023</span></div>
             </div>
         </div>
-        <div class="media-item Sculpture Installation">
+        <div class="media-item Installation Workshop">
             <div class="p-image">
-                <img src="/window.JPG">
+                <img src="assets/window.webp">
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="window.html">three windows: say hi.</a></div>
-                <div class="p-details">Sculpture, Installation, Website<span class="p-year">2024</span></div>
+                <div class="p-title"><a href="pages/window.html">three windows: say hi.</a></div>
+                <div class="p-details">Site Intervention, Installation, Website, Participatory<span
+                        class="p-year">2024</span></div>
             </div>
         </div>
-        <div class="media-item Installation">
+        <div class="media-item Installation Sound">
             <div class="p-image">
-                <img src="/sister.jpg">
+                <img src="assets/sister.webp">
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="sister.html">sister swings</a></div>
+                <div class="p-title"><a href="pages/sister.html">sister swings</a></div>
                 <div class="p-details">Site Intervention, Installation, Website<span class="p-year">2023</span></div>
             </div>
         </div>
-        <div class="media-item Website Mobile Interactive">
+        <div class="media-item Website Digital">
             <div class="p-image">
-                <img src="/phone.jpg">
+                <img src="assets/phone.webp">
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="phone.html">phoneSketches</a></div>
+                <div class="p-title"><a href="pages/phone.html">phoneSketches</a></div>
                 <div class="p-details">Website, Mobile, Interactive<span class="p-year">2023-2024</span></div>
             </div>
         </div>
         <div class="media-item Performance Print Publication">
             <div class="p-image">
-                <img src="/swan.jpg">
+                <img src="assets/swan.webp">
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="swan.html">a song i sang to the lake</a></div>
+                <div class="p-title"><a href="pages/swan.html">a song i sang to the lake</a></div>
                 <div class="p-details">Performance, Print, Publication<span class="p-year">2024</span></div>
             </div>
         </div>
-        <div class="media-item Performance">
+        <div class="media-item Sound Performance Workshop">
             <div class="p-image">
-                <video autoplay loop muted playsinline src="cup.mp4"></video>
+                <video autoplay loop muted playsinline src="assets/cup.mp4"></video>
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="cup.html">two cups and a secret</a></div>
+                <div class="p-title"><a href="pages/cup.html">two cups and a secret</a></div>
                 <div class="p-details">Performance, Cups, Participatory<span class="p-year">2024</span></div>
             </div>
         </div>
-        <div class="media-item Sound Website Participatory">
+        <div class="media-item Sound Website Performance Workshop">
             <div class="p-image">
-                <video autoplay loop muted playsinline src="aswe.mp4"></video>
+                <video autoplay loop muted playsinline src="assets/aswe.mp4"></video>
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="aswe.html">as we speak</a></div>
+                <div class="p-title"><a href="pages/aswe.html">as we speak</a></div>
                 <div class="p-details">Sound, Website, Participatory<span class="p-year">2024</span></div>
             </div>
         </div>
         <div class="media-item Website">
             <div class="p-image">
-                <img src="./love.gif">
+                <video autoplay muted loop playsinline src="assets/love.mp4"></video>
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="love.html">Loving or leaving a ship</a></div>
+                <div class="p-title"><a href="pages/love.html">Loving or leaving a ship</a></div>
                 <div class="p-details">Website<span class="p-year">2023</span></div>
             </div>
         </div>
-        <div class="media-item Print Anthology Publication">
+        <div class="media-item Print Publication">
             <div class="p-image">
-                <img src="./cd.jpg">
+                <img src="assets/cd.webp">
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="cd.html">Don't Hold The Ladder Horizontally</a></div>
+                <div class="p-title"><a href="pages/cd.html">Don't Hold The Ladder Horizontally</a></div>
                 <div class="p-details">Print, Anthology, Publication<span class="p-year">2024</span></div>
             </div>
         </div>
-        <div class="media-item Print Publication Series">
+        <div class="media-item Print">
             <div class="p-image">
-                <img src="./dear.jpg">
+                <img src="assets/nominal.webp">
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="dear.html">Dear Reader</a></div>
+                <div class="p-title"><a href="pages/nominal.html">Nominal Whisper</a></div>
                 <div class="p-details">Print, Publication, Series<span class="p-year">2024</span></div>
             </div>
         </div>
-        <div class="media-item Identity Print">
+        <div class="media-item Print">
             <div class="p-image">
-                <img src="./uje.jpg">
+                <video autoplay muted loop playsinline src="assets/permeated.webm"></video>
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="uje.html">Undergraduate Juried Exhibition Identity</a></div>
+                <div class="p-title"><a href="pages/permeated.html">Permeated Vision</a></div>
+                <div class="p-details">Print, Publication<span class="p-year">2024</span></div>
+            </div>
+        </div>
+        <div class="media-item Identity Print Poster">
+            <div class="p-image">
+                <img src="assets/uje.webp">
+            </div>
+            <div class="p-top">
+                <div class="p-title"><a href="pages/uje.html">Undergraduate Juried Exhibition Identity</a></div>
+                <div class="p-details">Identity, Print, Poster<span class="p-year">2023</span></div>
+            </div>
+        </div>
+        <div class="media-item Identity Print Poster">
+            <div class="p-image">
+                <img src="assets/q.webp">
+            </div>
+            <div class="p-top">
+                <div class="p-title"><a href="pages/q.html">Draw Four Exhibition Identity</a></div>
                 <div class="p-details">Identity, Print<span class="p-year">2023</span></div>
             </div>
         </div>
-        <div class="media-item Identity Print">
+        <div class="media-item Performance Sound Video">
             <div class="p-image">
-                <img src="./q.jpg">
+                <video muted autoplay playsinline loop src="assets/ball.mp4"></video>
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="q.html">Draw Four Exhibition Identity</a></div>
-                <div class="p-details">Identity, Print<span class="p-year">2023</span></div>
-            </div>
-        </div>
-        <div class="media-item Performance Video">
-            <div class="p-image">
-                <img src="./ball.gif">
-            </div>
-            <div class="p-top">
-                <div class="p-title"><a href="ball.html">Pointing Waltz</a></div>
+                <div class="p-title"><a href="pages/ball.html">Pointing Waltz</a></div>
                 <div class="p-details">Performance, Video<span class="p-year">2023</span></div>
             </div>
         </div>
-        <div class="media-item Identity Print">
+        <div class="media-item Identity Print Video">
             <div class="p-image">
-                <img src="./sb.gif">
+                <video autoplay loop muted playsinline src="assets/sb.webm"></video>
             </div>
             <div class="p-top">
-                <div class="p-title"><a href="sb.html">Poster for Sara Bouchard "Forest for the Trees"</a></div>
+                <div class="p-title"><a href="pages/sb.html">Poster for Sara Bouchard "Forest for the Trees"</a></div>
                 <div class="p-details">Identity, Print<span class="p-year">2023</span></div>
+            </div>
+        </div>
+        <div class="media-item Installation">
+            <div class="p-image">
+                <video autoplay loop muted playsinline src="assets//no2.mp4"></video>
+            </div>
+            <div class="p-top">
+                <div class="p-title"><a href="pages/filter.html">AN (Augmented Nationality)</a></div>
+                <div class="p-details">Installation, AR<span class="p-year">2023</span></div>
             </div>
         </div>
     </div>
     <div class="update-date">
-        Last updated on 30 May 2024
+        Last updated on 28 June 2024
     </div>
     <section id="mobile-reminder">
         <span style="font-size: 24px; line-height: 36px;">💻</span><br>For a better view of this website, please visit
         it on a laptop or a computer :-)
     </section>
-    <script>
-        const emailSynth = new Tone.Synth().toDestination();
-        const instagramSynth = new Tone.Synth().toDestination();
-        const resumeSynth = new Tone.Synth().toDestination();
-        const playEmailSound = () => emailSynth.triggerAttackRelease("C4", "8n");
-        const playInstagramSound = () => instagramSynth.triggerAttackRelease("E4", "8n");
-        const playResumeSound = () => resumeSynth.triggerAttackRelease("G4", "8n");
-        const emailLink = document.querySelector('#links a[href^="mailto"]');
-        const instagramLink = document.querySelector('#links a[href*="instagram"]');
-        const resumeLink = document.querySelector('#links a[href*="read.cv"]');
-
-        function filterSelection(category) {
-            let items = document.getElementsByClassName("media-item");
-            let buttons = document.getElementsByClassName("filter-button");
-
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove("selected");
-            }
-
-            document.getElementById(category + "-filter").classList.add("selected");
-
-            if (category === "all") category = "";
-            for (let i = 0; i < items.length; i++) {
-                if (items[i].className.indexOf(category) > -1) {
-                    items[i].style.display = "";
-                } else {
-                    items[i].style.display = "none";
-                }
-            }
-        }
-
-        function clearFilter() {
-            let items = document.getElementsByClassName("media-item");
-            let buttons = document.getElementsByClassName("filter-button");
-
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove("selected");
-            }
-
-            for (let i = 0; i < items.length; i++) {
-                items[i].style.display = "";
-            }
-        }
-
-        emailLink.addEventListener('mouseenter', playEmailSound);
-        instagramLink.addEventListener('mouseenter', playInstagramSound);
-        resumeLink.addEventListener('mouseenter', playResumeSound);
-    </script>
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
