@@ -15,6 +15,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.39/Tone.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+</head>
 </head>
 
 <body>
@@ -25,12 +27,16 @@
             <a href="https://www.instagram.com/rasimsimsim/" onmouseover="playJingle()">Instagram</a> &nbsp;
             <a href="https://read.cv/rasim" onmouseover="playJingle()">Resume</a>
         </span>
-
-        <span id="web-text">They find comfort in the discovery of the unknown. Inviting others to connect with it through rituals, their work uses the human body as an interface for a link. A link that goes through bodies of nature, objects of use, everyday experiences, technology and memory. An ever changing scale that carries weights of culture, social structures, gender and post-colonial reality, balanced at times with collectivity and participation. The manifestation of these ideas find themselves in
+        <span id="web-text">They find comfort in the discovery of the unknown. Inviting others to connect with it
+            through rituals, their work uses the human body as an interface for a link. A link that goes through bodies
+            of nature, objects of use, everyday experiences, technology and memory. An ever changing scale that carries
+            weights of culture, social structures, gender and post-colonial reality, balanced at times with collectivity
+            and participation. The manifestation of these ideas find themselves in
             websites, installations, print, videos, performances and sculptures.</span>
         <span id="mobile-text">Rasim Bayramov is a designer and artist interested in unfolding of objects, humans,
-            technologies and their invisible links through websites, sculptures, print and more</span><br><br>
+            technologies and their invisible links through websites, sculptures, print and more</span>
         <span id="locations">From Baku to Istanbul to (currently) Richmond.</span>
+        <a href="https://ux.rasim.run" id="switch-button"><i class="ph ph-hand-tap"></i> Switch to Interaction Design portfolio</a>
         <div class="filter-buttons">
             <button id="clear-filter" class="clear-filter-button" onclick="clearFilter()">Clear Filter</button>
             <button id="Identity-filter" class="filter-button" onclick="filterSelection('Identity')">Identity</button>
@@ -46,7 +52,6 @@
                 onclick="filterSelection('Performance')">Performance</button>
             <button id="Workshop-filter" class="filter-button" onclick="filterSelection('Workshop')">Workshop</button>
         </div>
-
     </div>
 
     <div class="content">

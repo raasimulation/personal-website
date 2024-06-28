@@ -3,7 +3,7 @@
     src: url(assets/geist.ttf);
 }
 
-/* General Styles */
+/* general styles */
 
 ::selection {
     color: rgb(255, 130, 224);
@@ -28,7 +28,6 @@ body {
     flex-direction: row;
     min-height: 100vh;
 }
-
 
 .intro-description {
     display: flex;
@@ -62,6 +61,26 @@ body {
 
 #mobile-text {
     display: none;
+}
+
+#switch-button {
+    color: #a3a3a3;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: center;
+    background-color: #222;
+    border: 0.5px solid #333;
+    border-radius: 8px;
+    position: sticky;
+    top: 56px;
+    transition: 0.3s all;
+}
+
+#switch-button:hover {
+    color: #fff;
+    text-decoration:none;
+    cursor: pointer;
+    transition: 0.2s all;
 }
 
 a:link,
@@ -266,7 +285,7 @@ a:hover {
     #mobile-text {
         display: inline;
     }
-
+    
     .p-details {
         display: flex;
         flex-direction: row;
