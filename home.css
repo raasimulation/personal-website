@@ -50,6 +50,7 @@ body {
     position: sticky;
     top: 24px;
     pointer-events: auto;
+    font-size: 36px;
 }
 
 #links {
@@ -72,7 +73,7 @@ body {
     border: 0.5px solid #333;
     border-radius: 8px;
     position: sticky;
-    top: 56px;
+    top: 90px;
     transition: 0.3s all;
 }
 
