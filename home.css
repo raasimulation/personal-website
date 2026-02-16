@@ -166,7 +166,7 @@ a:hover {
 .p-top {
     display: flex;
     flex-direction: column;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     gap: 4px;
 }
 
@@ -177,7 +177,7 @@ a:hover {
     text-align: left;
     align-items: center;
     width: 100%;
-    line-height: 24px;
+    line-height: 20px;
     color: #9c9c9c;
 }
 
