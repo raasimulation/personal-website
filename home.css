@@ -6,7 +6,7 @@
 /* general styles */
 
 ::selection {
-    color: rgb(255, 130, 224);
+    color: rgb(199, 21, 133);
     background: none;
 }
 
@@ -21,41 +21,56 @@
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(250, 250, 250);
     margin: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     min-height: 100vh;
+
 }
 
 .intro-description {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    font-size: 14px;
-    color: azure;
-    padding: 24px;
-    width: 400px;
+    position: sticky;
+    z-index: 10;
+    gap: 0.75em;
+    font-size: 1.5em;
+    color: #1a1a1a;
+    padding: 1.25em;
+    width: 100%;
     height: auto;
-    border-right: 1px #222222 solid;
+    border-bottom: 1px #e0e0e0 solid;
     text-decoration: wavy;
 }
 
-.intro-description:has(#left-body:hover) {
-    background-image: url(assets/lbody.webp);
+#name-hover {
+    cursor: crosshair;
 }
 
-#left-body {
-    position: sticky;
-    top: 24px;
-    pointer-events: auto;
+.ink-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.ink-canvas.fading {
+    opacity: 0;
 }
 
 #links {
     display: flex;
     flex-direction: row;
     width: 100%;
-    gap: 4px;
+    gap: 0.275em;
+}
+
+#web-text {
+    color: #6b6b6b;
 }
 
 #mobile-text {
@@ -63,83 +78,72 @@ body {
 }
 
 #switch-button {
-    color: #222;
-    padding: 8px 12px;
+    color: #f5f5f5;
+    padding: 0.571em 0.857em;
     width: 100%;
     text-align: center;
-    background-color: #ccc;
-    border: 0.5px solid #333;
-    border-radius: 8px;
+    background-color: #1a1a1a;
+    border: 0.5px solid #ccc;
+    border-radius: 0.571em;
     position: sticky;
-    top: 90px;
+    top: 6.43em;
     transition: 0.3s all;
 }
 
 #switch-button:hover {
-    color: #000;
-    background-color: #fff;
-    text-decoration:none;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
     cursor: pointer;
     transition: 0.2s all;
 }
 
 a:link,
 a:visited {
-    color: azure;
+    color: #1a1a1a;
     text-decoration: none;
 }
 
 a:hover {
-    color: rgb(255, 130, 224);
+    color: rgb(199, 21, 133);
     text-decoration: wavy;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .update-date {
     z-index: 2;
-    left: 24px;
-    bottom: 24px;
+    left: 2em;
+    bottom: 2em;
     position: fixed;
     margin: 0;
-    color: azure;
-    font-size: 12px;
+    color: #444;
+    font-size: 0.75em;
 }
 
 .content {
-    background: linear-gradient(0deg, rgb(13, 13, 13) 0%, rgba(0,0,0,1) 100%);
-    column-count: 3;
-    column-gap: 24px;
+    background: linear-gradient(0deg, rgb(240, 240, 240) 0%, rgba(255, 255, 255, 1) 100%);
+    column-count: 4;
+    column-gap: 1.5em;
     height: fit-content;
     width: 100%;
-    padding: 24px;
+    padding: 1.5em;
 }
 
 .media-item {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 1em;
+    margin-bottom: 1.5em;
     break-inside: avoid;
-    transition: opacity 0.2s cubic-bezier(.34,.36,0,.98), transform 0.2s cubic-bezier(.34,.36,0,.98);
+    transition: opacity 0.2s cubic-bezier(.34, .36, 0, .98), transform 0.2s cubic-bezier(.34, .36, 0, .98);
     opacity: 1;
     transform: none;
-}
-
-.media-item.hiding {
-    opacity: 0.2;
-    transform: translateY(-10px);
-}
-
-.media-item.hidden {
-    display: none;
-    opacity: 0;
-    transform: translateY(-10px);
 }
 
 .p-image {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 1.25em;
     width: 100%;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -148,8 +152,8 @@ a:hover {
 .p-image img,
 .p-image video {
     width: 100%;
-    border-radius: 8px;
-    border: 1px #222 solid;
+    border-radius: 0.5em;
+    border: 1px #e0e0e0 solid;
     object-fit: cover;
     height: auto;
     z-index: 0;
@@ -160,14 +164,15 @@ a:hover {
     display: flex;
     flex-direction: column;
     overflow: auto;
-    gap: 16px;
+    gap: 1em;
 }
 
 .p-top {
     display: flex;
     flex-direction: column;
-    margin-bottom: 4px;
-    gap: 4px;
+    align-items: flex-start;
+    margin-bottom: 0.25em;
+    gap: 0.25em;
 }
 
 .p-details {
@@ -177,19 +182,19 @@ a:hover {
     text-align: left;
     align-items: center;
     width: 100%;
-    line-height: 20px;
-    color: #9c9c9c;
+    line-height: 1.25em;
+    color: #6b6b6b;
 }
 
 .p-year {
-    color: azure;
-    margin-left: 12px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 8px;
-    padding-right: 8px;
-    border: 1px solid #9c9c9c;
-    border-radius: 16px;
+    color: #333;
+    background-color: #e6e6e6;
+    font-size: 0.85em;
+    padding-top: 0.294em;
+    padding-bottom: 0.294em;
+    padding-left: 0.735em;
+    padding-right: 0.735em;
+    border-radius: 99em;
 }
 
 .p-title {
@@ -198,7 +203,7 @@ a:hover {
 }
 
 .p-text {
-    color: rgba(185, 185, 185, 0.849);
+    color: rgba(70, 70, 70, 0.85);
     width: 100%;
     display: inline-block;
 }
@@ -210,45 +215,45 @@ a:hover {
 .filter-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 16px;
+    gap: 0.5em;
     background-color: none;
 }
 
 .filter-buttons button {
-    background-color: #333;
-    color: azure;
+    background-color: #e6e6e6;
+    color: #1a1a1a;
     border: none;
-    padding: 8px 16px;
+    padding: 0.5em 1em;
+    font-size: 0.75em;
     cursor: pointer;
-    border-radius: 99px;
+    border-radius: 99em;
     transition: all 0.1s;
 }
 
 .filter-buttons button.clear-filter-button {
     background-color: none;
-    color: azure;
-    padding: 8px 16px;
+    color: #1a1a1a;
+    padding: 0.5em 1em;
 }
 
 .filter-buttons .filter-button:hover {
-    transform: translateY(-2px);
-    background-color: rgb(255, 130, 224);
-    color: black;
+    transform: translateY(-0.125em);
+    background-color: rgb(199, 21, 133);
+    color: #fdfdfd;
 }
 
 .filter-buttons .selected {
-    background-color: rgb(255, 130, 224);
-    color: #000;
+    background-color: rgb(199, 21, 133);
+    color: #fdfdfd;
 }
 
 .filter-buttons .clear-filter-button:hover {
-    color: #e74c3c;
-    background-color: #f5f5f5;
+    color: #c0392b;
+    background-color: #ededed;
     transform: rotate(-4deg);
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 42.5em) {
 
     body {
         flex-direction: column;
@@ -257,14 +262,14 @@ a:hover {
     .intro-description {
         width: 100%;
         height: auto;
-        border-bottom: 1px #222222 solid;
-        padding: 16px;
-        color: #f5f5f5;
+        border-bottom: 1px #e0e0e0 solid;
+        padding: 1.143em;
+        color: #1a1a1a;
         z-index: 2;
     }
 
     .intro-description a {
-        color: rgb(255, 188, 238);
+        color: rgb(160, 20, 120);
     }
 
     #left-body {
@@ -273,8 +278,8 @@ a:hover {
 
     .content {
         column-count: 1;
-        column-gap: 16px;
-        padding: 16px;
+        column-gap: 1em;
+        padding: 1em;
     }
 
     #web-text {
@@ -288,54 +293,54 @@ a:hover {
     #mobile-text {
         display: inline;
     }
-    
+
     .p-details {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         text-align: left;
         align-items: center;
-        line-height: 16px;
+        line-height: 1em;
     }
 
     .p-image img,
     .p-image video {
-        border-radius: 6px;
+        border-radius: 0.375em;
     }
 
     .p-year {
-        font-size: 14px;
-        color: #9c9c9c;
+        font-size: 0.875em;
+        color: #6b6b6b;
         margin: 0;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-top: 0.143em;
+        padding-bottom: 0.143em;
+        padding-left: 0.571em;
+        padding-right: 0.571em;
         border: none;
     }
 
     #mobile-reminder {
         display: inline;
-        color: #f5f5f5;
-        padding: 16px 16px 24px 16px;
-        font-size: 14px;
-        margin: 24px 0 64px 0;
+        color: #333;
+        padding: 1.143em 1.143em 1.714em 1.143em;
+        font-size: 0.875em;
+        margin: 1.714em 0 4.571em 0;
         text-align: center;
-        border-bottom: #333 1px dashed;
-        border-top: #333 1px dashed;
+        border-bottom: #ccc 1px dashed;
+        border-top: #ccc 1px dashed;
     }
 
     .update-date {
-        left: 24px;
-        bottom: 16px;
+        left: 2em;
+        bottom: 1.333em;
         position: fixed;
         margin: 0;
-        color: azure;
-        font-size: 12px;
+        color: #444;
+        font-size: 0.75em;
     }
 
     .filter-buttons {
-        gap: 8px;
+        gap: 0.5em;
         margin-top: 0;
     }
 
@@ -344,13 +349,13 @@ a:hover {
     }
 
     .filter-buttons .filter-button:active {
-        transform: translateX(-8px);
-        background-color: rgb(255, 130, 224);
-        color: azure;
+        transform: translateX(-0.5em);
+        background-color: rgb(199, 21, 133);
+        color: #fdfdfd;
     }
 
     .filter-buttons .clear-filter-button:active {
-        color: #e74c3c;
+        color: #c0392b;
         background-color: none;
         transform: rotate(-16deg);
     }
